@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+"use strict";
+
+// var cli = require('commander');
+var clc = require('cli-color');
+var rek = require('rekuire');
+var version = rek('package.json').version;
+
+var nupes_cli = rek('nupes-cli');
+
+// cli
+//   .version(version)
+//   .usage("[<directory>]")
+//   .parse(process.argv);
+
+
+var targets = process.argv.slice(2).filter(function(v) { return v.indexOf("-") != 0; });
+
+if (targets.length >= 2) {
+  return console.log(clc.red("Too many arguments!! Besides flags, there can't be only one!"));
+}
+
+nupes_cli.analize(targets[0]);
