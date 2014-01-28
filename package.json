@@ -26,9 +26,7 @@
   },
   "preferGlobal": true,
   "main": "./lib/nupes-cli.js",
-  "man" : "./man/doc.1",
   "scripts": {
-    "test": "jasmine-node ./test/",
     "start": "node ."
   },
   "bin": {
