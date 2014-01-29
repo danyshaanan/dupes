@@ -26,7 +26,6 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 Output:
 * Add option to group/sort results by containing folders, or by size, or by amount of duplicates.
 * Add duration stats.
-* Add sum of all duplicate files sizes.
 * Add verbose and quite options and set output levels.
 * Enable saving output as json and then querying it in various ways.
 * Pretify output.
