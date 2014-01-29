@@ -11,8 +11,9 @@ var nupes_cli = rek('nupes-cli');
 
 cli
   .version(version)
-  .usage("<directory>")
+  .usage("<directory> [-e]")
   // .usage("<directory> [-s <size|amount|path>] [-n <size>] [-x <size>]")
+  .option("-e, --include-empty", "include empty files")
   // .option("-s, --sort <type>", "sort results by type")
   // .option('-n, --min-size <size>', 'only check files of size <size> or larger')
   // .option('-x, --max-size <size>', 'only check files of size <size> or smaller')
@@ -25,4 +26,6 @@ if (targets.length >= 2) {
   return console.log(clc.red("Too many arguments!! Besides flags, there can't be only one!"));
 }
 
-nupes_cli.findDupes(targets[0]);
+nupes_cli.findDupes(targets[0], {
+  includeEmpty: cli.includeEmpty
+});
