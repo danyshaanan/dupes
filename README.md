@@ -18,6 +18,7 @@ $ npm install -g nupes
 nupes works by running a list of differentiation methods - each one seperates the current pools of files into smaller pools. Pools of size 1 are then ommited. The current differentiation methods are:
 * File size
 * Whole file md5
+
 Generally, each method has a different trade-off of speed and accuracy. By starting with the cheapest methods, we make sure that more expensive ones will be executed on a smaller amount of files. By finishing with a whole-file-checksum, we guarantee that files deemed identical are indeed so.
 
 * * *
@@ -31,4 +32,3 @@ Generally, each method has a different trade-off of speed and accuracy. By start
 * Find duplicate folders.
 * Turn this list into github issues.
 * ...
-* 
