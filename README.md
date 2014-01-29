@@ -23,11 +23,12 @@ Generally, each method has a different trade-off of speed and accuracy. By start
 
 * * *
 ### TODOs
-* Add more differentiation methods: by headers, partial checksums.
-* Optimise order of differentiation methods.
+* Add differentiations by partial checksums (head, long head, tail).
+* Optimise set and order of differentiation methods.
 * Add option to limit files checked to certain sizes.
-* Add option to sort results by containing folders, or by size, or by amount of duplicates.
-* Add option to include or exclude files/folders by name or regex (currently excluding node_modules and .git).
+* Add option to group/sort results by containing folders, or by size, or by amount of duplicates.
+* Add option to include or exclude files/folders by name/regex, and set default excludes.
+* Add duration stats.
 * Add verbose and quite options and set output levels.
 * Add sum of all duplicate files sizes.
 * Pretify output.
