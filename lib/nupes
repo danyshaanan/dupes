@@ -25,4 +25,4 @@ if (targets.length >= 2) {
   return console.log(clc.red("Too many arguments!! Besides flags, there can't be only one!"));
 }
 
-nupes_cli.analize(targets[0]);
+nupes_cli.findDupes(targets[0]);
