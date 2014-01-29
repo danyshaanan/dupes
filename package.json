@@ -2,7 +2,7 @@
   "name": "dupes",
   "version": "0.0.0",
   "description": "A command line tool for finding duplicate files",
-  "keywords": ["dupes", "dupes", "duplicate files", "files", "cli"],
+  "keywords": ["dupes", "duplicate files", "files", "cli"],
   "homepage": "https://github.com/danyshaanan/dupes",
   "author": {
     "name": "Dany Shaanan",
