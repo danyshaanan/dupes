@@ -16,6 +16,7 @@ $ npm install -g dupes
 * * *
 ### How does it work?
 dupes works by running a list of differentiation methods - each one seperates the current pools of files into smaller pools. Pools of size 1 are then ommited. The current differentiation methods are:
+
 * File size - Very fast, filters out a lot of files, but obviously still leaves different files together.
 * MD5 of the whole file - Slower but definite.
 
@@ -24,6 +25,7 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 * * *
 ### TODOs
 Output:
+
 * Add option to group/sort results by containing folders, or by size, or by amount of duplicates.
 * Add duration stats.
 * Add verbose and quite options and set output levels.
@@ -31,6 +33,7 @@ Output:
 * Pretify output.
 
 Other:
+
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
 * Check if it is possible to prevent walk from walking between different volumes.
 * Try searching for a hash function faster than md5.
