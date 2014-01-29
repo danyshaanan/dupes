@@ -1,9 +1,9 @@
 {
-  "name": "nupes",
+  "name": "dupes",
   "version": "0.0.0",
   "description": "A command line tool for finding duplicate files",
-  "keywords": ["nupes", "dupes", "duplicate files", "files", "cli"],
-  "homepage": "https://github.com/danyshaanan/nupes",
+  "keywords": ["dupes", "dupes", "duplicate files", "files", "cli"],
+  "homepage": "https://github.com/danyshaanan/dupes",
   "author": {
     "name": "Dany Shaanan",
     "email": "danyshaanan@gmail.com",
@@ -13,24 +13,24 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/danyshaanan/nupes/blob/master/LICENSE"
+      "url": "https://github.com/danyshaanan/dupes/blob/master/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/danyshaanan/nupes.git"
+    "url": "git://github.com/danyshaanan/dupes.git"
   },
   "bugs": {
-    "url" : "https://github.com/danyshaanan/nupes",
+    "url" : "https://github.com/danyshaanan/dupes",
     "email" : "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/nupes-cli.js",
+  "main": "./lib/dupes-cli.js",
   "scripts": {
     "start": "node ."
   },
   "bin": {
-      "nupes" : "./lib/nupes"
+      "dupes" : "./lib/dupes"
   },
   "dependencies": {
     "rekuire": "*",

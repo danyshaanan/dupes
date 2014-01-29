@@ -1,21 +1,21 @@
-# nupes - WIP
+# dupes - WIP
 ## A command line tool for finding duplicate files
-nupes helps you find duplicate files.
+dupes helps you find duplicate files.
 
 This is a work in progress.
 
 * * *
 ### Installation
 ```bash
-$ npm install -g nupes
+$ npm install -g dupes
 ```
 * * *
 ### Usage
-`nupes <directory>` will search that directory for duplicate files and output the result. `nupes` will do the same for the current directory.
+`dupes <directory>` will search that directory for duplicate files and output the result. `dupes` will do the same for the current directory.
 
 * * *
 ### How does it work?
-nupes works by running a list of differentiation methods - each one seperates the current pools of files into smaller pools. Pools of size 1 are then ommited. The current differentiation methods are:
+dupes works by running a list of differentiation methods - each one seperates the current pools of files into smaller pools. Pools of size 1 are then ommited. The current differentiation methods are:
 * File size - Very fast, filters out a lot of files, but obviously still leaves different files together.
 * MD5 of the whole file - Slower but definite.
 
