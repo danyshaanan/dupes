@@ -33,6 +33,7 @@ Output:
 
 Other:
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
+* Check if it is possible to prevent walk from walking between different volumes.
 * Try searching for a hash function faster than md5.
 * Add option to limit files checked to certain sizes.
 * Add option to include or exclude files/folders by name/regex, and set default excludes.
