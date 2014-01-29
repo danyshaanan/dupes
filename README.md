@@ -29,6 +29,7 @@ Generally, each method has a different trade-off of speed and accuracy. By start
 * Add option to sort results by containing folders, or by size, or by amount of duplicates.
 * Add option to include or exclude files/folders by name or regex (currently excluding node_modules and .git).
 * Add verbose and quite options and set output levels.
+* Add sum of all duplicate files sizes.
 * Pretify output.
 * Find duplicate folders.
 * Turn this list into github issues.
