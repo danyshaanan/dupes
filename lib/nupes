@@ -2,17 +2,21 @@
 
 "use strict";
 
-// var cli = require('commander');
+var cli = require('commander');
 var clc = require('cli-color');
 var rek = require('rekuire');
 var version = rek('package.json').version;
 
 var nupes_cli = rek('nupes-cli');
 
-// cli
-//   .version(version)
-//   .usage("[<directory>]")
-//   .parse(process.argv);
+cli
+  .version(version)
+  .usage("<directory>")
+  // .usage("<directory> [-s <size|amount|path>] [-n <size>] [-x <size>]")
+  // .option("-s, --sort <type>", "sort results by type")
+  // .option('-n, --min-size <size>', 'only check files of size <size> or larger')
+  // .option('-x, --max-size <size>', 'only check files of size <size> or smaller')
+  .parse(process.argv);
 
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf("-") != 0; });
