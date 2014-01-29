@@ -31,6 +31,7 @@ Generally, each method has a different trade-off of speed and accuracy. By start
 * Add duration stats.
 * Add verbose and quite options and set output levels.
 * Add sum of all duplicate files sizes.
+* Enable saving output as json and then querying it in various ways.
 * Pretify output.
 * Find duplicate folders.
 * Turn this list into github issues.
