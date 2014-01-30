@@ -9,10 +9,11 @@ var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
-  .usage('<directory> [-eqv]')
+  .usage('<directory> [-eqvw]')
   .option('-e, --include-empty', 'include empty files')
   .option('-q, --quiet', 'do not print normal output')
   .option('-v, --verbose', 'print extra output')
+  .option('-w, --write', 'write results file inside target folder')
   .parse(process.argv);
 
 
@@ -24,5 +25,6 @@ if (targets.length >= 2) {
 dupes_cli.findDupes({
   targetPath: targets[0],
   includeEmpty: cli.includeEmpty,
-  verbosity: cli.quiet ? 0 : cli.verbose ? 2 : 1
+  verbosity: cli.quiet ? 0 : cli.verbose ? 2 : 1,
+  write: cli.write
 });
