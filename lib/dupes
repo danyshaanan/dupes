@@ -6,30 +6,23 @@ var cli = require('commander');
 var clc = require('cli-color');
 var rek = require('rekuire');
 var version = rek('package.json').version;
-
 var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
   .usage('<directory> [-eqv]')
-  // .usage('<directory> [-s <size|amount|path>] [-n <size>] [-x <size>]')
   .option('-e, --include-empty', 'include empty files')
   .option('-q, --quiet', 'do not print normal output')
   .option('-v, --verbose', 'print extra output')
-  // .option('-s, --sort <type>', 'sort results by type')
-  // .option('-n, --min-size <size>', 'only check files of size <size> or larger')
-  // .option('-x, --max-size <size>', 'only check files of size <size> or smaller')
   .parse(process.argv);
 
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
-
 if (targets.length >= 2) {
   return console.log(clc.red('Too many arguments!! Besides flags, there can be only one!'));
 }
 
 dupes_cli.logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
-
 dupes_cli.findDupes(targets[0], {
   includeEmpty: cli.includeEmpty
 });
