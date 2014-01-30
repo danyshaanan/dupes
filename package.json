@@ -1,6 +1,6 @@
 {
   "name": "dupes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command line tool for finding duplicate files",
   "keywords": ["dupes", "duplicate files", "files", "cli"],
   "homepage": "https://github.com/danyshaanan/dupes",
