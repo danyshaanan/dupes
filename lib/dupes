@@ -21,7 +21,7 @@ if (targets.length >= 2) {
   return dupes_cli.logger.error('Too many arguments!! Besides flags, there can be only one!');
 }
 
-dupes_cli.logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
 dupes_cli.findDupes(targets[0], {
-  includeEmpty: cli.includeEmpty
+  includeEmpty: cli.includeEmpty,
+  verbosity: cli.quiet ? 0 : cli.verbose ? 2 : 1
 });
