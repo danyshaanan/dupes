@@ -27,7 +27,6 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 Output:
 
 * Add option to group/sort results by containing folders, or by size, or by amount of duplicates.
-* Add duration stats.
 * Pretify output.
 
 Other:
