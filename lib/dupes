@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-"use strict";
+'use strict';
 
 var cli = require('commander');
 var clc = require('cli-color');
@@ -11,19 +11,19 @@ var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
-  .usage("<directory> [-e]")
-  // .usage("<directory> [-s <size|amount|path>] [-n <size>] [-x <size>]")
-  .option("-e, --include-empty", "include empty files")
-  // .option("-s, --sort <type>", "sort results by type")
+  .usage('<directory> [-e]')
+  // .usage('<directory> [-s <size|amount|path>] [-n <size>] [-x <size>]')
+  .option('-e, --include-empty', 'include empty files')
+  // .option('-s, --sort <type>', 'sort results by type')
   // .option('-n, --min-size <size>', 'only check files of size <size> or larger')
   // .option('-x, --max-size <size>', 'only check files of size <size> or smaller')
   .parse(process.argv);
 
 
-var targets = process.argv.slice(2).filter(function(v) { return v.indexOf("-") != 0; });
+var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 
 if (targets.length >= 2) {
-  return console.log(clc.red("Too many arguments!! Besides flags, there can't be only one!"));
+  return console.log(clc.red('Too many arguments!! Besides flags, there can\'t be only one!'));
 }
 
 dupes_cli.findDupes(targets[0], {
