@@ -37,5 +37,6 @@ Other:
 * Add option to limit files checked to certain sizes.
 * Add option to include or exclude files/folders by name/regex, and set default excludes.
 * Find duplicate folders.
+* Refactor dupes-cli.js
 * Turn this list into github issues.
 * ...
