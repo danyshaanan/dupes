@@ -28,7 +28,6 @@ Output:
 
 * Add option to group/sort results by containing folders, or by size, or by amount of duplicates.
 * Add duration stats.
-* Add verbose and quite options and set output levels.
 * Enable saving output as json and then querying it in various ways.
 * Pretify output.
 
