@@ -23,7 +23,7 @@ cli
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 
 if (targets.length >= 2) {
-  return console.log(clc.red('Too many arguments!! Besides flags, there can\'t be only one!'));
+  return console.log(clc.red('Too many arguments!! Besides flags, there can be only one!'));
 }
 
 dupes_cli.findDupes(targets[0], {
