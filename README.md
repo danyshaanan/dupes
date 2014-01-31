@@ -26,7 +26,9 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 ### TODOs
 Output:
 
-* Add option to group/sort results by containing folders, or by size, or by amount of duplicates.
+* Add timestamp to resultObject.
+* Add a `dupes-read` command to read a dupes.json file with various options.
+* Make `dupes-read` show the 'ago' representation of the timestamp (in color, like nsyrc).
 * Pretify output.
 
 Other:
