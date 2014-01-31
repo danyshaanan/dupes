@@ -25,6 +25,7 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 * * *
 ### TODOs
 
+* Refactor dupes-cli and dupes-read-cli.js. Lots of TODOs in the code!
 * Change array style to comma-before.
 * Fix crash on file write or read failure.
 * Pretify output.
@@ -35,6 +36,5 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 * Add option to limit files checked to certain sizes.
 * Add option to include or exclude files/folders by name/regex, and set default excludes.
 * Find duplicate folders.
-* Refactor dupes-cli.js
 * Turn this list into github issues.
 * ...
