@@ -34,10 +34,10 @@
       "dupes-read" : "./lib/dupes-read"
   },
   "dependencies": {
-    "rekuire": "*",
-    "cli-color": "*",
-    "commander": "*",
-    "walk": "*",
-    "moment": "*"
+    "rekuire": "0.1.5",
+    "cli-color": "0.2.3",
+    "commander": "2.1.0",
+    "walk": "2.3.1",
+    "moment": "2.5.1"
   }
 }
