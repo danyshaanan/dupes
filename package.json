@@ -30,7 +30,8 @@
     "start": "node ."
   },
   "bin": {
-      "dupes" : "./lib/dupes"
+      "dupes" : "./lib/dupes",
+      "dupes-read" : "./lib/dupes-read"
   },
   "dependencies": {
     "rekuire": "*",
