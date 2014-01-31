@@ -10,11 +10,13 @@ var dupes_read_cli = rek('dupes-read-cli');
 
 cli
   .version(version)
-  .usage('[filepath] [-hVj]')
+  .usage('[filepath] [-hVjqv]')
   .option('-j, --show-json', 'show full json result')
+  .option('-q, --quiet', 'print only duplicates list')
+  .option('-v, --verbose', 'print extra output')
   .parse(process.argv);
 
-// logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
+logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 if (targets.length >= 2) {

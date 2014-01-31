@@ -12,7 +12,7 @@ cli
   .version(version)
   .usage('[directory] [-hVeqvw] [--overwrite --no-write --file=filename]')
   .option('-e, --include-empty', 'include empty files')
-  .option('-q, --quiet', 'do not print normal output')
+  .option('-q, --quiet', 'print only duplicates list')
   .option('-v, --verbose', 'print extra output')
   .option('-f, --file <filename>', 'write results to a different file, use with "=": "--file="report.json"')
   .option('--no-write', 'do not write results file')
