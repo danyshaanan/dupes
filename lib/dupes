@@ -13,7 +13,7 @@ cli
   .option('-e, --include-empty', 'include empty files')
   .option('-q, --quiet', 'do not print normal output')
   .option('-v, --verbose', 'print extra output')
-  .option('-w, --write', 'write results file inside target folder')
+  .option('--no-write', 'do not write results file')
   .option('--overwrite', 'overwrite existing results file. use with --write')
   .parse(process.argv);
 
