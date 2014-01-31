@@ -11,11 +11,11 @@ $ npm install -g dupes
 ```
 * * *
 ### Usage
-`dupes <directory>` will search that directory for duplicate files and write a dupes.json results file.
+`dupes [directory]` will search that directory for duplicate files and write a dupes.json results file.
 
-`dupes-read <directory>` will open that directory's dupes.json file and output its results.
+`dupes-read [directory]` will open that directory's dupes.json file and output its results.
 
-Ommiting the `<directory>` will run the commands on the current directory.
+Ommiting the `[directory]` will run the commands on the current directory.
 
 * * *
 ### How does it work?
