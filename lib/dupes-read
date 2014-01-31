@@ -13,7 +13,7 @@ cli
   .usage('[filepath] [-hVjqv]')
   .option('-j, --show-json', 'show full json result')
   .option('-q, --quiet', 'print only duplicates list')
-  .option('-v, --verbose', 'print extra output')
+  .option('-v, --verbose', 'print progression and statistics')
   .parse(process.argv);
 
 logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);

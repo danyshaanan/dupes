@@ -13,7 +13,7 @@ cli
   .usage('[directory] [-hVeqvw] [--overwrite --no-write --file=filename]')
   .option('-e, --include-empty', 'include empty files')
   .option('-q, --quiet', 'print only duplicates list')
-  .option('-v, --verbose', 'print extra output')
+  .option('-v, --verbose', 'print progression and statistics')
   .option('-f, --file <filename>', 'write results to a different file, use with "=": "--file="report.json"')
   .option('--no-write', 'do not write results file')
   .option('--overwrite', 'overwrite existing results file. use with --write')
