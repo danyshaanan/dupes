@@ -10,13 +10,11 @@ var dupes_read = rek('dupes-read.js');
 
 cli
   .version(version)
-  .usage('[filepath] [-hVjqv]')
+  .usage('[filepath] [-hVjls]')
   .option('-j, --show-json', 'show full json result')
-  .option('-q, --quiet', 'print only duplicates list')
-  .option('-v, --verbose', 'print progression and statistics')
+  .option('-l, --list', 'print only duplicates list')
+  .option('-s, --statistics', 'print only progression and statistics')
   .parse(process.argv);
-
-logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 if (targets.length >= 2) {
@@ -25,5 +23,7 @@ if (targets.length >= 2) {
 
 dupes_read.show({
   target: targets[0],
-  showJson: cli.showJson
+  showJson: cli.showJson,
+  onlyList: cli.list && !cli.statistics,
+  onlyStats: cli.statistics && !cli.list
 });
