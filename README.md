@@ -26,6 +26,7 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 ### TODOs
 Output:
 
+* make `dupes -w` the default after implementing no-rewrite unless --force
 * Pretify output.
 
 Other:
