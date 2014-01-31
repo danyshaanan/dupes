@@ -4,26 +4,26 @@
 
 var cli = require('commander');
 var rek = require('rekuire');
-var logger = rek('logger');
+var clc = require('cli-color');
 var version = rek('package.json').version;
 var dupes = rek('dupes.js');
 
 cli
   .version(version)
-  .usage('[directory] [-hVeqvw] [--overwrite --no-write --file=filename]')
+  .usage('[directory] [-hVelsq] [--overwrite --no-write --file=filename]')
   .option('-e, --include-empty', 'include empty files')
-  .option('-q, --quiet', 'print only duplicates list')
-  .option('-v, --verbose', 'print progression and statistics')
-  .option('-f, --file <filename>', 'write results to a different file, use with "=": "--file="report.json"')
+  .option('-l, --list', 'print only duplicates list')
+  .option('-s, --statistics', 'print only progression and statistics')
+  .option('-q, --quiet', 'do not print output')
+  .option('--file <filename>', 'write results to a different file, use with "=": "--file="report.json"')
   .option('--no-write', 'do not write results file')
   .option('--overwrite', 'overwrite existing results file. use with --write')
   .parse(process.argv);
 
-logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 if (targets.length >= 2) {
-  return logger.error('Too many arguments!! Besides flags, there can be only one!');
+  return console.log(clc.red('Too many arguments!! Besides flags, there can be only one!'));
 }
 
 dupes.findDupes({
@@ -31,5 +31,7 @@ dupes.findDupes({
   includeEmpty: cli.includeEmpty,
   fileName: cli.file || 'dupes.json',
   write: cli.write,
-  overwrite: cli.overwrite
+  overwrite: cli.overwrite,
+  onlyList: cli.list && !cli.statistics,
+  onlyStats: cli.statistics && !cli.list
 });
