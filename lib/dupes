@@ -6,7 +6,7 @@ var cli = require('commander');
 var rek = require('rekuire');
 var logger = rek('logger');
 var version = rek('package.json').version;
-var dupes_cli = rek('dupes-cli');
+var dupes_cli = rek('dupes.js');
 
 cli
   .version(version)
