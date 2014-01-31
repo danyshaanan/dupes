@@ -9,7 +9,7 @@ var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
-  .usage('<directory> [-hVeqvw] [--overwrite]')
+  .usage('<directory> [-hVeqvw] [--overwrite --no-write]')
   .option('-e, --include-empty', 'include empty files')
   .option('-q, --quiet', 'do not print normal output')
   .option('-v, --verbose', 'print extra output')
