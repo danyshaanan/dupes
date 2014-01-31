@@ -37,4 +37,5 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 * Add option to include or exclude files/folders by name/regex, and set default excludes.
 * Find duplicate folders.
 * Turn this list into github issues.
+* Write `dupes-gui`, a web gui to write and read dupes results in the browser with express.
 * ...
