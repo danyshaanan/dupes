@@ -24,13 +24,9 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 
 * * *
 ### TODOs
-Output:
 
 * make `dupes -w` the default after implementing no-rewrite unless --force
 * Pretify output.
-
-Other:
-
 * Limit dependencies versions.
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
 * Check if it is possible to prevent walk from walking between different volumes.
