@@ -37,6 +37,7 @@
     "rekuire": "*",
     "cli-color": "*",
     "commander": "*",
-    "walk": "*"
+    "walk": "*",
+    "moment": "*"
   }
 }
