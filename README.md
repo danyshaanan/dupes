@@ -13,9 +13,11 @@ $ npm install -g dupes
 ### Usage
 `dupes [directory]` will search that directory for duplicate files and write a dupes.json results file.
 
-`dupes-read [directory]` will open that directory's dupes.json file and output its results.
-
 Ommiting the `[directory]` will run the commands on the current directory.
+
+`dupes-read [filePath]` will open that directory's .json file and output its results.
+
+Ommiting the `[filePath]` will open 'dupes.json' in the current directory.
 
 * * *
 ### How does it work?

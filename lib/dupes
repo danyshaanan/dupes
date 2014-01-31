@@ -9,10 +9,11 @@ var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
-  .usage('<directory> [-hVeqvw] [--overwrite --no-write]')
+  .usage('[directory] [-hVeqvw] [--overwrite --no-write --file=filename]')
   .option('-e, --include-empty', 'include empty files')
   .option('-q, --quiet', 'do not print normal output')
   .option('-v, --verbose', 'print extra output')
+  .option('-f, --file <filename>', 'write results to a different file, use with "=": "--file="report.json"')
   .option('--no-write', 'do not write results file')
   .option('--overwrite', 'overwrite existing results file. use with --write')
   .parse(process.argv);
@@ -27,6 +28,7 @@ dupes_cli.findDupes({
   target: targets[0],
   includeEmpty: cli.includeEmpty,
   verbosity: cli.quiet ? 0 : cli.verbose ? 2 : 1,
+  fileName: cli.file || 'dupes.json',
   write: cli.write,
   overwrite: cli.overwrite
 });

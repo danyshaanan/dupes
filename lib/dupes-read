@@ -10,7 +10,7 @@ var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
-  .usage('<directory> [-hVj]')
+  .usage('[filepath] [-hVj]')
   .option('-j, --show-json', 'show full json result')
   .parse(process.argv);
 
@@ -20,6 +20,7 @@ if (targets.length >= 2) {
   return dupes_cli.logger.error('Too many arguments!! Besides flags, there can be only one!'); //TODO: this should be called not from dupes_cli
 }
 
-dupes_read_cli.show(targets[0], {
+dupes_read_cli.show({
+  target: targets[0],
   showJson: cli.showJson
 });
