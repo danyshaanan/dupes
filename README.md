@@ -27,6 +27,7 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 
 * Change array style to comma-before.
 * Make `dupes -w` the default.
+* Fix crash on file write failure.
 * Pretify output.
 * Limit dependencies versions.
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
