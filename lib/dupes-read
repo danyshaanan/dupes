@@ -3,10 +3,10 @@
 'use strict';
 
 var cli = require('commander');
-var clc = require('cli-color');
 var rek = require('rekuire');
-var version = rek('package.json').version;
+var utils = rek('utils');
 var dupes_read = rek('dupes-read.js');
+var version = rek('package.json').version;
 
 cli
   .version(version)
@@ -18,7 +18,7 @@ cli
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 if (targets.length >= 2) {
-  return console.log(clc.red('Too many arguments!! Besides flags, there can be only one!'));
+  utils.fatalError('Too many arguments!! Besides flags, there can be only one!');
 }
 
 dupes_read.show({
