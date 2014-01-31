@@ -26,7 +26,7 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 ### TODOs
 
 * Change array style to comma-before.
-* Make `dupes -w` the default after implementing no-rewrite unless --force
+* Make `dupes -w` the default.
 * Pretify output.
 * Limit dependencies versions.
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
