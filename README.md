@@ -33,7 +33,6 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 
 * Refactor dupes-cli and dupes-read-cli.js. Lots of TODOs in the code!
 * Change array style to comma-before.
-* Fix crash on file write or read failure.
 * Pretify output.
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
 * Check if it is possible to prevent walk from walking between different volumes.
