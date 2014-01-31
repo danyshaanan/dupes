@@ -6,7 +6,7 @@ var cli = require('commander');
 var rek = require('rekuire');
 var logger = rek('logger');
 var version = rek('package.json').version;
-var dupes_read_cli = rek('dupes-read.js');
+var dupes_read = rek('dupes-read.js');
 
 cli
   .version(version)
@@ -23,7 +23,7 @@ if (targets.length >= 2) {
   return logger.error('Too many arguments!! Besides flags, there can be only one!');
 }
 
-dupes_read_cli.show({
+dupes_read.show({
   target: targets[0],
   showJson: cli.showJson
 });

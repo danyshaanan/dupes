@@ -6,7 +6,7 @@ var cli = require('commander');
 var rek = require('rekuire');
 var logger = rek('logger');
 var version = rek('package.json').version;
-var dupes_cli = rek('dupes.js');
+var dupes = rek('dupes.js');
 
 cli
   .version(version)
@@ -26,7 +26,7 @@ if (targets.length >= 2) {
   return logger.error('Too many arguments!! Besides flags, there can be only one!');
 }
 
-dupes_cli.findDupes({
+dupes.findDupes({
   target: targets[0],
   includeEmpty: cli.includeEmpty,
   fileName: cli.file || 'dupes.json',
