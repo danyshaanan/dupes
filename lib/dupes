@@ -4,6 +4,7 @@
 
 var cli = require('commander');
 var rek = require('rekuire');
+var logger = rek('logger');
 var version = rek('package.json').version;
 var dupes_cli = rek('dupes-cli');
 
@@ -18,16 +19,16 @@ cli
   .option('--overwrite', 'overwrite existing results file. use with --write')
   .parse(process.argv);
 
+logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 if (targets.length >= 2) {
-  return dupes_cli.logger.error('Too many arguments!! Besides flags, there can be only one!');
+  return logger.error('Too many arguments!! Besides flags, there can be only one!');
 }
 
 dupes_cli.findDupes({
   target: targets[0],
   includeEmpty: cli.includeEmpty,
-  verbosity: cli.quiet ? 0 : cli.verbose ? 2 : 1,
   fileName: cli.file || 'dupes.json',
   write: cli.write,
   overwrite: cli.overwrite

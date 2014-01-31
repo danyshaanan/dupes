@@ -4,9 +4,9 @@
 
 var cli = require('commander');
 var rek = require('rekuire');
+var logger = rek('logger');
 var version = rek('package.json').version;
 var dupes_read_cli = rek('dupes-read-cli');
-var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
@@ -14,10 +14,11 @@ cli
   .option('-j, --show-json', 'show full json result')
   .parse(process.argv);
 
+// logger.setVerbosity(cli.quiet ? 0 : cli.verbose ? 2 : 1);
 
 var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
 if (targets.length >= 2) {
-  return dupes_cli.logger.error('Too many arguments!! Besides flags, there can be only one!'); //TODO: this should be called not from dupes_cli
+  return logger.error('Too many arguments!! Besides flags, there can be only one!');
 }
 
 dupes_read_cli.show({
