@@ -26,8 +26,6 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 ### TODOs
 Output:
 
-* Add timestamp to resultObject.
-* Make `dupes-read` show the 'ago' representation of the timestamp (in color, like nsyrc).
 * Pretify output.
 
 Other:
