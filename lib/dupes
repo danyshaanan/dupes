@@ -32,6 +32,6 @@ dupes.findDupes({
   fileName: cli.file || 'dupes.json',
   write: cli.write,
   overwrite: cli.overwrite,
-  onlyList: cli.list && !cli.statistics,
-  onlyStats: cli.statistics && !cli.list
+  printList: !cli.statistics && !cli.quiet,
+  printStats: !cli.list && !cli.quiet
 });
