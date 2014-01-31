@@ -32,6 +32,7 @@ Output:
 
 Other:
 
+* Limit dependencies versions.
 * Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
 * Check if it is possible to prevent walk from walking between different volumes.
 * Try searching for a hash function faster than md5.
