@@ -10,7 +10,7 @@ var dupes_cli = rek('dupes-cli');
 
 cli
   .version(version)
-  .usage('<directory> [-j]')
+  .usage('<directory> [-hVj]')
   .option('-j, --show-json', 'show full json result')
   .parse(process.argv);
 
