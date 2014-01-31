@@ -24,7 +24,7 @@ if (targets.length >= 2) {
 }
 
 dupes_cli.findDupes({
-  targetPath: targets[0],
+  target: targets[0],
   includeEmpty: cli.includeEmpty,
   verbosity: cli.quiet ? 0 : cli.verbose ? 2 : 1,
   write: cli.write,
