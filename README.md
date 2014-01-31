@@ -19,6 +19,7 @@ Ommiting the `[directory]` will run the commands on the current directory.
 
 Ommiting the `[filePath]` will open 'dupes.json' in the current directory.
 
+See `dupes -h` and `dupes-read -h` for more options.
 * * *
 ### How does it work?
 dupes works by running a list of differentiation methods - each one seperates the current pools of files into smaller pools. Pools of size 1 are then ommited. The current differentiation methods are:
@@ -31,15 +32,13 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 * * *
 ### TODOs
 
-* Refactor dupes-cli and dupes-read-cli.js. Lots of TODOs in the code!
-* Change array style to comma-before.
-* Pretify output.
-* Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
-* Check if it is possible to prevent walk from walking between different volumes.
-* Try searching for a hash function faster than md5.
+* Implement better ways to read results (largest files, largest groups)
 * Add option to limit files checked to certain sizes.
 * Add option to include or exclude files/folders by name/regex, and set default excludes.
-* Find duplicate folders.
 * Turn this list into github issues.
+* Find duplicate folders.
+* Check if separateFilesByHeadMD5 (commented out) will work better with bigger file size limitations.
+* Try searching for a hash function faster than md5.
 * Write `dupes-gui`, a web gui to write and read dupes results in the browser with express.
+* Change array style to comma-before.
 * ...
