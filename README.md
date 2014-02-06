@@ -32,6 +32,10 @@ Each method has a different trade-off of speed and accuracy. By starting with th
 * * *
 ### TODOs
 
+* Sign the result object with package name and version
+* Allow rewriting of dupes.json files if they are signed
+* Implement an option to run only on files from old result
+
 * Implement better ways to read results (largest files, largest groups)
 * Add option to limit files checked to certain sizes.
 * Add option to include or exclude files/folders by name/regex, and set default excludes.
