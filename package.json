@@ -25,7 +25,6 @@
     "email" : "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/dupes-cli.js",
   "scripts": {
     "start": "node ."
   },
