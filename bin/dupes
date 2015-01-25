@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-'use strict';
+'use strict'
 
-var cli = require('commander');
-var rek = require('rekuire');
-var utils = rek('utils');
-var dupes = rek('dupes.js');
-var version = rek('package.json').version;
+var cli = require('commander')
+var rek = require('rekuire')
+var utils = rek('utils')
+var dupes = rek('dupes.js')
+var version = rek('package.json').version
 
 cli
   .version(version)
@@ -18,12 +18,12 @@ cli
   .option('--file <filename>', 'write results to a different file, use with "=": "--file="report.json"')
   .option('--no-write', 'do not write results file')
   .option('--overwrite', 'overwrite existing results file. use with --write')
-  .parse(process.argv);
+  .parse(process.argv)
 
 
-var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') !== 0; });
+var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') !== 0 })
 if (targets.length >= 2) {
-  utils.fatalError('Too many arguments!! Besides flags, there can be only one!');
+  utils.fatalError('Too many arguments!! Besides flags, there can be only one!')
 }
 
 dupes.findDupes({
@@ -34,4 +34,4 @@ dupes.findDupes({
   overwrite: cli.overwrite,
   printList: !cli.statistics && !cli.quiet,
   printStats: !cli.list && !cli.quiet
-});
+})
