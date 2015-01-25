@@ -26,7 +26,8 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "test": "grunt"
   },
   "bin": {
       "dupes" : "./bin/dupes",
