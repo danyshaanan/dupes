@@ -1,4 +1,9 @@
 # dupes - WIP
+
+[![Build Status](https://travis-ci.org/danyshaanan/dupes.png)](https://travis-ci.org/danyshaanan/dupes)
+[![NPM Version](https://img.shields.io/npm/v/dupes.svg?style=flat)](https://npmjs.org/package/dupes)
+[![License](http://img.shields.io/npm/l/dupes.svg?style=flat)](LICENSE)
+
 ## A command line tool for finding duplicate files
 dupes helps you find duplicate files.
 
