@@ -21,7 +21,7 @@ cli
   .parse(process.argv);
 
 
-var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') != 0; });
+var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') !== 0; });
 if (targets.length >= 2) {
   utils.fatalError('Too many arguments!! Besides flags, there can be only one!');
 }
