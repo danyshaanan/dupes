@@ -3,10 +3,9 @@
 'use strict';
 
 var cli = require('commander');
-var rek = require('rekuire');
-var utils = rek('utils');
-var dupes_read = rek('dupes-read.js');
-var version = rek('package.json').version;
+var utils = require('../lib/utils.js')
+var dupes_read = require('../dupes-read.js')
+var version = require('../../package.json').version
 
 cli
   .version(version)

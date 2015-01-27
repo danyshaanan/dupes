@@ -2,10 +2,9 @@
 
 var fs = require('fs')
 var walk = require('walk')
-var rek = require('rekuire')
-var methods = rek('methods')
-var utils = rek('utils')
-var Results = rek('Results')
+var methods = require('./lib/methods.js')
+var utils = require('./lib/utils.js')
+var Results = require('./lib/Results.js')
 
 module.exports = {
   findDupes: findDupes

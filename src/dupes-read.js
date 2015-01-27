@@ -1,8 +1,7 @@
 'use strict'
 
-var rek = require('rekuire')
-var utils = rek('utils')
-var Results = rek('Results')
+var utils = require('./lib/utils.js')
+var Results = require('./lib/Results.js')
 
 module.exports = {
   show: show

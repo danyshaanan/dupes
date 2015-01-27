@@ -1,14 +1,13 @@
 'use strict'
 
 var fs = require('fs')
-var rek = require('rekuire')
-var utils = rek('utils')
-var coloredTimeAgo = rek('coloredTimeAgo')
+var utils = require('./utils.js')
+var coloredTimeAgo = require('./coloredTimeAgo.js')
 
 function Results(filePath) {
   this.obj = {
     package: 'dupes',
-    version: rek('package.json').version
+    version: require('../../package.json').version
   }
   if (filePath) {
     this.load(filePath)

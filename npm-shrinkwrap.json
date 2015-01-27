@@ -2,18 +2,6 @@
   "name": "dupes",
   "version": "0.0.5",
   "dependencies": {
-    "rekuire": {
-      "version": "0.1.5",
-      "from": "https://registry.npmjs.org/rekuire/-/rekuire-0.1.5.tgz",
-      "resolved": "https://registry.npmjs.org/rekuire/-/rekuire-0.1.5.tgz",
-      "dependencies": {
-        "underscore": {
-          "version": "1.5.2",
-          "from": "https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz",
-          "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz"
-        }
-      }
-    },
     "cli-color": {
       "version": "0.2.3",
       "from": "https://registry.npmjs.org/cli-color/-/cli-color-0.2.3.tgz",
@@ -48,6 +36,11 @@
       "from": "https://registry.npmjs.org/commander/-/commander-2.1.0.tgz",
       "resolved": "https://registry.npmjs.org/commander/-/commander-2.1.0.tgz"
     },
+    "moment": {
+      "version": "2.5.1",
+      "from": "https://registry.npmjs.org/moment/-/moment-2.5.1.tgz",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.5.1.tgz"
+    },
     "walk": {
       "version": "2.3.1",
       "from": "https://registry.npmjs.org/walk/-/walk-2.3.1.tgz",
@@ -66,11 +59,6 @@
           }
         }
       }
-    },
-    "moment": {
-      "version": "2.5.1",
-      "from": "https://registry.npmjs.org/moment/-/moment-2.5.1.tgz",
-      "resolved": "https://registry.npmjs.org/moment/-/moment-2.5.1.tgz"
     }
   }
 }

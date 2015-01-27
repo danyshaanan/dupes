@@ -35,7 +35,6 @@
       "dupes-read" : "./src/bin/dupes-read"
   },
   "dependencies": {
-    "rekuire": "0.1.5",
     "cli-color": "0.2.3",
     "commander": "2.1.0",
     "walk": "2.3.1",
