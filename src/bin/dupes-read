@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-'use strict';
+'use strict'
 
-var cli = require('commander');
+var cli = require('commander')
 var utils = require('../lib/utils.js')
 var dupes_read = require('../dupes-read.js')
 var version = require('../../package.json').version
@@ -13,11 +13,11 @@ cli
   .option('-j, --show-json', 'show full json result')
   .option('-l, --list', 'print only duplicates list')
   .option('-s, --statistics', 'print only progression and statistics')
-  .parse(process.argv);
+  .parse(process.argv)
 
-var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') !== 0; });
+var targets = process.argv.slice(2).filter(function(v) { return v.indexOf('-') !== 0 })
 if (targets.length >= 2) {
-  utils.fatalError('Too many arguments!! Besides flags, there can be only one!');
+  utils.fatalError('Too many arguments!! Besides flags, there can be only one!')
 }
 
 dupes_read.show({
@@ -25,4 +25,4 @@ dupes_read.show({
   showJson: cli.showJson,
   onlyList: cli.list && !cli.statistics,
   onlyStats: cli.statistics && !cli.list
-});
+})
