@@ -9,7 +9,6 @@ module.exports = {
   separateFilesByMD5: separateFilesByMD5
 }
 
-
 function separateFilesBySize(sets) {
   return separateFilesByKeyFunction(sets, keyFunctions.fileSize)
 }
@@ -23,7 +22,7 @@ function separateFilesByMD5(sets) {
   return separateFilesByKeyFunction(sets, keyFunctions.fileMD5)
 }
 
-////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////
 
 var keyFunctions = {
   fileSize: function(file) {
@@ -37,7 +36,7 @@ var keyFunctions = {
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////
 
 // function getFileHead(file) {
 //   var headSize = Math.min(1024, file.size)
@@ -47,7 +46,6 @@ var keyFunctions = {
 //   fs.close(fd)
 //   return buffer.toString('base64')
 // }
-
 
 function separateFilesByKeyFunction(sets, keyFunction) {
   var result = []
@@ -67,7 +65,7 @@ function separateFilesByKeyFunction(sets, keyFunction) {
     // } else {
       // result.push(set)
     // }
-  })
+    })
 
   return filterSingles(result)
 }

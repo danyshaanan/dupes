@@ -57,7 +57,7 @@ Results.prototype.age = function() {
   return 'This file was created on: ' + this.obj.date + '\n' + 'Which is ' + coloredTimeAgo.coloredTimeAgo(this.obj.unixTimeStamp)
 }
 
-Results.prototype.list = function() { //TODO: Advance this, enable all kinds of representations, like inc volume
+Results.prototype.list = function() { // TODO: Advance this, enable all kinds of representations, like inc volume
   var setsByPathOnly = this.obj.sets.map(function(set) { return set.map(function(file) { return file.path })})
   var list = setsByPathOnly.map(function(set) { return set.join('\n') }).join('\n\n')
   return list
@@ -74,7 +74,7 @@ Results.prototype.statistics = function() {
     'Total duplicate volume: ' + utils.humanVolume(totalDuplicatesVolume) + ' (' + totalDuplicatesVolume + 'B)',
     'Total run duration: ' + totalRunDuration.toFixed(3) + ' seconds.',
     '-----------------------------------------'
-    ].join('\n')
+  ].join('\n')
 }
 
 module.exports = Results

@@ -13,7 +13,6 @@ module.exports = {
   sum: sum
 }
 
-
 function checkFileExists(filePath) {
   if (!fs.existsSync(filePath)) {
     fatalError(filePath + ' does not exist!')
