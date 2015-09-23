@@ -11,9 +11,9 @@ module.exports = {
 }
 
 var methodsList = [
-  methods.separateFilesBySize
-// , methods.separateFilesByHeadMD5
-, methods.separateFilesByMD5
+  methods.separateFilesBySize,
+  // methods.separateFilesByHeadMD5,
+  methods.separateFilesByMD5
 ]
 
 var results
@@ -32,16 +32,16 @@ function findDupes(options) {
   getFiles(options, processFiles)
 }
 
-/////////////////////////////////
+// ///////////////////////////////
 
 function getFiles(options, callback) {
   var start = process.hrtime()
   if (options.printStats) {
     console.log('\nScanning files in ' + options.targetPath)
   }
-  var files   = []
+  var files = []
   var walkOptions = { followLinks: false, filters: ['node_modules', '.git'] }
-  var walker  = walk.walk(options.targetPath, walkOptions)
+  var walker = walk.walk(options.targetPath, walkOptions)
 
   walker.on('file', function(root, stat, next) {
     if (stat.size || options.includeEmpty) {
