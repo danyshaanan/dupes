@@ -28,7 +28,7 @@
   "preferGlobal": true,
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
-    "test": "npm run lint && npm run tape",
+    "test": "npm run lint",
     "start": "node ."
   },
   "bin": {
