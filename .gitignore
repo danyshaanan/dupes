@@ -7,6 +7,6 @@ npm-debug.log
 .DS_Store
 
 node_modules
-test
 dupes.json
 
+npm-shrinkwrap.json
