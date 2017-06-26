@@ -28,6 +28,13 @@ dupes works by running a list of differentiation methods - each one seperates th
 * MD5 of the whole file - Slower but definite.
 
 Each method has a different trade-off of speed and accuracy. By starting with the cheapest methods, we make sure that more expensive ones will be executed on a smaller amount of files. By finishing with a whole-file-checksum, we guarantee that files deemed identical are indeed so.
+* * *
+### Development
+```bash
+nvm use
+yarn
+yarn test
+```
 
 * * *
 ### TODOs
